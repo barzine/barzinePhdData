@@ -1,0 +1,41 @@
+---
+title: "dataPreparation"
+output: rmarkdown::html_vignette
+author: "Mitra Barzine"
+date: "`r Sys.Date()`"
+vignette: >
+  %\VignetteIndexEntry{dataPreparation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(barzinePhdData)
+library(barzinePhdR)
+data("pandey.origin")
+```
+
+
+```{r}
+pandey.origin[is.na(pandey.origin)]<-0
+pandey.origin_noCluster<-removeClusters(pandey.origin,
+                                        path=system.file("extdata", 
+                                                         "pandey_expression_table.txt",
+                                                         package = "barzinePhdData"))
+pandey.nc<-extractWithinSampleAbundance(pandey.origin_noCluster)
+colPandey<-c("Adrenal", "Colon", "Oesophagus", "Gall bladder", "Heart",
+             "Kidney", "Liver", "Lung", "Ovary", "Pancreas", "Placenta", "Prostate",
+             "Rectum", "Testis", "Urinarybladder")
+pandey.nc<-fixNamesPandey(pandey.nc)
+pandey.top3<-barzinePhdR::strip(pandey.nc[,colPandey])
+```
+
+
+
