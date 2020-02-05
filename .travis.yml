@@ -6,9 +6,4 @@ cache: packages
 bioc_required: true
 bioc_use_devel: true
 
-
 r_github_packages: barzine/barzinePhdR
-
-os:
-  - linux
-  - osx
