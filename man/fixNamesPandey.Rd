@@ -5,10 +5,12 @@
 \title{Homogenise the names of the Pandey data with the other datasets
 (in particular with Uhlen et al. )}
 \usage{
-fixNamesPandey(DF)
+fixNamesPandey(DF, method)
 }
 \arguments{
 \item{DF}{pandey expression (Top3 PSM) (numeric) data.frame}
+
+\item{method}{character string. Allows to adapt to the original files.}
 }
 \value{
 a data.frame with homogenised columns names

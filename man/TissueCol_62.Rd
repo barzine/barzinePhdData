@@ -3,7 +3,7 @@
 \docType{data}
 \name{TissueCol_62}
 \alias{TissueCol_62}
-\title{Colour palette covering all the tissues that are in Pandey, Uhlén, GTEx, Kuster
+\title{Colour palette covering most of the tissues that are in Pandey, Uhlén, GTEx, Kuster
 with their different spelling
 designed with
 [https://medialab.github.io/iwanthue/](https://medialab.github.io/iwanthue/)}
@@ -12,7 +12,7 @@ designed with
 TissueCol_62
 }
 \description{
-Colour palette covering all the tissues that are in Pandey, Uhlén, GTEx, Kuster
+Colour palette covering most of the tissues that are in Pandey, Uhlén, GTEx, Kuster
 with their different spelling
 designed with
 [https://medialab.github.io/iwanthue/](https://medialab.github.io/iwanthue/)

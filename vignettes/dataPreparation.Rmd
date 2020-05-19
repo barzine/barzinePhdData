@@ -19,23 +19,142 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(barzinePhdData)
 library(barzinePhdR)
-data("pandey.origin")
 ```
 
 
-```{r}
-pandey.origin[is.na(pandey.origin)]<-0
+# Proteomics
+## Pandey
+### Top3
+```{r pandeyTop3}
+pandey.origin<-barzinePhdR::Read.table(filename =
+                                         system.file("extdata",'pandey_expression_filtered.txt',
+                                                        package = "barzinePhdData"),
+                                       na.strings='-',
+                                       comment.char = "@")
+
 pandey.origin_noCluster<-removeClusters(pandey.origin,
                                         path=system.file("extdata", 
                                                          "pandey_expression_table.txt",
                                                          package = "barzinePhdData"))
+
 pandey.nc<-extractWithinSampleAbundance(pandey.origin_noCluster)
-colPandey<-c("Adrenal", "Colon", "Oesophagus", "Gall bladder", "Heart",
+pandey.nc<-NAto0(pandey.nc)
+
+pandey.top3<-fixNamesPandey(pandey.nc,method="top3")
+
+pandey.top3<-barzinePhdR::strip(pandey.top3)
+
+colPandey<-c("Adrenal", "Colon", "Oesophagus", "Gallbladder", "Heart",
              "Kidney", "Liver", "Lung", "Ovary", "Pancreas", "Placenta", "Prostate",
              "Rectum", "Testis", "Urinarybladder")
-pandey.nc<-fixNamesPandey(pandey.nc)
-pandey.top3<-barzinePhdR::strip(pandey.nc[,colPandey])
+
+pandey.top3.15<-barzinePhdR::strip(pandey.top3[,colPandey])
+```
+
+
+### PPKM
+
+```{r pandeyPPKM}
+pandey.ppkm<-barzinePhdR::Read.table(filename =
+                          system.file("extdata",'EnsembleGenePPKM_V3_Pandey.txt',
+                                                        package = "barzinePhdData"),
+                        na.strings='x')
+pandey.ppkm<-NAto0(pandey.ppkm)
+pandey.ppkm<-fixNamesPandey(pandey.ppkm,'ppkm')
+pandey.ppkm<-barzinePhdR::strip(pandey.ppkm)
+
+pandey.ppkm.15<-barzinePhdR::strip(pandey.ppkm[,colPandey])
+```
+
+### PPM
+
+```{r pandeyPPM}
+pandey.ppm<-barzinePhdR::Read.table(filename =
+                          system.file("extdata","EnsembleGenePPM_V3_Pandey.txt",
+                                      package = "barzinePhdData"),
+                       na.strings='x')
+pandey.ppm<-NAto0(pandey.ppm)
+pandey.ppm<-fixNamesPandey(pandey.ppm,method='ppm')
+pandey.ppm<-barzinePhdR::strip(pandey.ppm)
+
+pandey.ppm.15<-barzinePhdR::strip(pandey.ppm[,colPandey])
+```
+
+
+## Kuster
+### Top3
+```{r kusterTop3}
+kuster.origin<-barzinePhdR::Read.table(filename =
+                                         system.file("extdata",'kuster_expression_filtered.txt',
+                                                        package = "barzinePhdData"),
+                                       na.strings='-',
+                                       comment.char = "@")
+
+kuster.origin_noCluster<-removeClusters(kuster.origin,
+                                        path=system.file("extdata", 
+                                                         "kuster_expression_table.txt",
+                                                         package = "barzinePhdData"))
+
+kuster.nc<-extractWithinSampleTop3Abundance(kuster.origin_noCluster)
+kuster.nc<-NAto0(kuster.nc)
+
+kuster.top3.all<-fixNamesKuster(kuster.nc)
+kuster.top3.all<-barzinePhdR::strip(kuster.top3.all)
+
+kuster.top3<-mergeUterus(kuster.top3.all)
+kuster.top3<-barzinePhdR::strip(kuster.top3)
+
+```
+
+
+### PPKM
+
+```{r kusterPPKM}
+kuster.ppkm.all<-barzinePhdR::Read.table(filename =
+                          system.file("extdata",'EnsembleGenePPKM_V3_Kuster.txt',
+                                                        package = "barzinePhdData"),
+                        na.strings='x')
+kuster.ppkm.all<-NAto0(kuster.ppkm.all)
+kuster.ppkm.all<-fixNamesKuster(kuster.ppkm.all)
+kuster.ppkm.all<-barzinePhdR::strip(kuster.ppkm.all)
+
+kuster.ppkm<-barzinePhdR::strip(mergeUterus(kuster.ppkm.all))
+```
+
+### PPM
+
+```{r kusterPPM}
+kuster.ppm.all<-barzinePhdR::Read.table(filename =
+                          system.file("extdata","EnsembleGenePPM_V3_Kuster.txt",
+                                      package = "barzinePhdData"),
+                       na.strings='x')
+kuster.ppm.all<-NAto0(kuster.ppm.all)
+kuster.ppm.all<-fixNamesKuster(kuster.ppm.all)
+kuster.ppm.all<-barzinePhdR::strip(kuster.ppm.all)
+
+kuster.ppm<-barzinePhdR::strip(mergeUterus(kuster.ppm.all))
 ```
 
 
 
+
+## Cutler
+```{r CutlerTop3}
+cutler.origin<-barzinePhdR::Read.table(filename =
+                                         system.file("extdata",'cutler_expression_filtered.txt',
+                                                        package = "barzinePhdData"),
+                                       na.strings='-',
+                                       comment.char = "@")
+
+cutler.origin_noCluster<-removeClusters(cutler.origin,
+                                        path=system.file("extdata", 
+                                                         "cutler_expression_table.txt",
+                                                         package = "barzinePhdData"))
+
+cutler.nc<-extractWithinSampleTop3Abundance(cutler.origin_noCluster)
+cutler.nc<-NAto0(cutler.nc)
+
+cutler.top3<-fixNamesCutler(cutler.nc)
+
+cutler.top3<-barzinePhdR::strip(cutler.top3)
+```

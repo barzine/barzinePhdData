@@ -3,35 +3,50 @@
 \docType{data}
 \name{pandey.top3}
 \alias{pandey.top3}
-\title{Protein expression for Pandey et al. mapped to Ensembl 76 (GRCh38)
-and quantified with the Top3 method (PSM) explain
+\title{Protein expression for Pandey Lab data mapped to Ensembl 76 (GRCh38)
+and quantified with the Top3 method (PSM) explained
 in the second chapter of Barzine, M.P PhD thesis:
 Investigating Normal Human Gene Expression in Tissues
 with High-throughput Transcriptomic and Proteomic data.}
-\format{A data frame with 6436 proteins (ie rows/observations) for 15 tissue samples (ie columns/variables)
+\format{A data.frame with 15245 proteins for 30 tissues and cell lines
 \describe{
-  \item{Adrenal}{numeric,PSM}
-  \item{Colon}{numeric,PSM}
-  \item{Oesophagus}{numeric,PSM}
-  \item{Gall bladder}{numeric,PSM}
-  \item{Heart}{numeric,PSM}
-  \item{Kidney}{numeric,PSM}
-  \item{Liver}{numeric,PSM}
-  \item{Lung}{numeric,PSM}
-  \item{Ovary}{numeric,PSM}
-  \item{Pancreas}{numeric,PSM}
-  \item{Placenta}{numeric,PSM}
-  \item{Prostate}{numeric,PSM}
-  \item{Rectum}{numeric,PSM}
-  \item{Testis}{numeric,PSM}
-  \item{Urinarybladder}{numeric,PSM}
+\item{Adrenal}{numeric,normalised PSM}
+\item{B cells}{numeric,normalisded PSM}
+\item{CD4T cells}{numeric,normalised PSM}
+\item{CD8T cells}{numeric,normalised PSM}
+\item{Colon}{numeric, normalised PSM}
+\item{Oesophagus}{numeric, normalised PSM}
+\item{Frontalcortex}{numeric, normalised PSM}
+\item{Gallbladder}{numeric, normalised PSM}
+\item{Heart}{numeric, normalised PSM}
+\item{Kidney}{numeric, normalised PSM}
+\item{Liver}{numeric, normalised PSM}
+\item{Lung}{numeric, normalised PSM}
+\item{Monocytes}{numeric, normalised PSM}
+\item{NK cells}{numeric, normalised PSM}
+\item{Ovary}{numeric, normalised PSM}
+\item{Pancreas}{numeric, normalised PSM}
+\item{Platelets}{numeric, normalised PSM}
+\item{Prostate}{numeric, normalised PSM}
+\item{Rectum}{numeric, normalised PSM}
+\item{Retina}{numeric, normalised PSM}
+\item{Spinalcord}{numeric, normalised PSM}
+\item{Testis}{numeric, normalised PSM}
+\item{Urinarybladder"}{numeric, normalised PSM}
+\item{Fetal Brain}{numeric, normalised PSM}
+\item{Fetal Gut}{numeric, normalised PSM}
+\item{Fetal Heart}{numeric, normalised PSM}
+\item{Fetal Liver}{numeric, normalised PSM}
+\item{Fetal Ovary}{numeric, normalised PSM}
+\item{Placenta}{numeric, normalised PSM}
+\item{Fetal Testis}{numeric, normalised PSM}
 }}
 \usage{
 pandey.top3
 }
 \description{
-Protein expression for Pandey et al. mapped to Ensembl 76 (GRCh38)
-and quantified with the Top3 method (PSM) explain
+Protein expression for Pandey Lab data mapped to Ensembl 76 (GRCh38)
+and quantified with the Top3 method (PSM) explained
 in the second chapter of Barzine, M.P PhD thesis:
 Investigating Normal Human Gene Expression in Tissues
 with High-throughput Transcriptomic and Proteomic data.

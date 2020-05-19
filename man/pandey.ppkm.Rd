@@ -3,35 +3,50 @@
 \docType{data}
 \name{pandey.ppkm}
 \alias{pandey.ppkm}
-\title{Protein expression for Pandey et al. mapped to Ensembl 76 (GRCh38)
-and quantified with the PPKM method explain
+\title{Protein expression for Pandey Lab data mapped to Ensembl 76 (GRCh38)
+and quantified with the PPKM method explained
 in the fifth chapter of Barzine, M.P PhD thesis:
 Investigating Normal Human Gene Expression in Tissues
 with High-throughput Transcriptomic and Proteomic data.}
-\format{A data frame with 12990 proteins (ie rows/observations) for 15 tissues (ie columns/variables)
+\format{A data frame with 15245 proteins (ie rows/observations) for 30 tissues (ie columns/variables)
 \describe{
-  \item{Adrenal}{numeric, PPKM}
-  \item{Colon}{numeric, PPKM}
-  \item{Oesophagus}{numeric, PPKM}
-  \item{Gall bladder}{numeric, PPKM}
-  \item{Heart}{numeric, PPKM}
-  \item{Kidney}{numeric, PPKM}
-  \item{Liver}{numeric, PPKM}
-  \item{Lung}{numeric, PPKM}
-  \item{Ovary}{numeric, PPKM}
-  \item{Pancreas}{numeric, PPKM}
-  \item{Placenta}{numeric, PPKM}
-  \item{Prostate}{numeric, PPKM}
-  \item{Rectum}{numeric, PPKM}
-  \item{Testis}{numeric, PPKM}
-  \item{Urinarybladder}{numeric, PPKM}
+\item{Adrenal}{numeric, PPKM}
+\item{B cells}{numeric, PPKM}
+\item{CD4T cells}{numeric, PPKM}
+\item{CD8T cells}{numeric, PPKM}
+\item{Colon}{numeric, PPKM}
+\item{Oesophagus}{numeric, PPKM}
+\item{Fetal Brain}{numeric, PPKM}
+\item{Fetal Gut}{numeric, PPKM}
+\item{Fetal Heart}{numeric, PPKM}
+\item{Fetal Liver}{numeric, PPKM}
+\item{Fetal Ovary}{numeric, PPKM}
+\item{Placenta}{numeric, PPKM}
+\item{Fetal Testis}{numeric, PPKM}
+\item{Frontalcortex}{numeric, PPKM}
+\item{Gallbladder}{numeric, PPKM}
+\item{Heart}{numeric, PPKM}
+\item{Kidney}{numeric, PPKM}
+\item{Liver}{numeric, PPKM}
+\item{Lung}{numeric, PPKM}
+\item{Monocytes}{numeric, PPKM}
+\item{NK cells}{numeric, PPKM}
+\item{Ovary}{numeric, PPKM}
+\item{Pancreas}{numeric, PPKM}
+\item{Platelets}{numeric, PPKM}
+\item{Prostate}{numeric, PPKM}
+\item{Rectum}{numeric, PPKM}
+\item{Retina}{numeric, PPKM}
+\item{Spinalcord}{numeric, PPKM}
+\item{Testis}{numeric, PPKM}
+\item{Urinarybladder}{numeric, PPKM}
 }}
 \usage{
 pandey.ppkm
 }
 \description{
-Protein expression for Pandey et al. mapped to Ensembl 76 (GRCh38)
-and quantified with the PPKM method explain
+Protein expression for Pandey Lab data mapped to Ensembl 76 (GRCh38)
+and quantified with the PPKM method explained
 in the fifth chapter of Barzine, M.P PhD thesis:
 Investigating Normal Human Gene Expression in Tissues
 with High-throughput Transcriptomic and Proteomic data.
