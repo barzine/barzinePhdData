@@ -3506,3 +3506,51 @@
 #' \item{Tonsil}{numeric, TPM}
 #'}
 "uhlen.htseq.tpm.pooled"
+
+# TiGER ids ---------
+#' Tiger4Tissues
+#' TiGER reports TS genes for thirty independent tissues (based on ESTs experiments).
+#' Liu, X., X. Yu, D. J. Zack, H. Zhu, and J. Qian (2008). ‘TiGER: a database for tissue-specific gene expression and regulation’. BMC Bioinformatics 9, p. 271“)
+#'
+#' Reported Refseq ids have been converted into Ensembl (version 76) ids
+#' selection only for Heart, Liver, Kidney and Testis
+#' @format A data frame with 1323 transcritp ids (ie rows/observations) of 4 tissues with different information (ie columns/variables)
+#' \describe{
+#' \item{refseq_id}{character string, initial reported refseq id}
+#' \item{ensembl_id}{character string, converted id into ensembl 76}
+#' \item{g.name}{character string, gene name}
+#' \item{tissue}{character string, name of the tissue where the id has been reported}
+#'}
+"Tiger4Tissues"
+
+# Tiger23Tissues
+#' TiGER reports TS genes for thirty independent tissues (based on ESTs experiments).
+#' Liu, X., X. Yu, D. J. Zack, H. Zhu, and J. Qian (2008). ‘TiGER: a database for tissue-specific gene expression and regulation’. BMC Bioinformatics 9, p. 271“)
+#'
+#' Reported Refseq ids have been converted into Ensembl (version 76) ids
+#' selection only for Heart, Liver, Kidney and Testis
+#' @format A data frame with 3014 transcritp ids (ie rows/observations) of 4 tissues with different information (ie columns/variables)
+#' \describe{
+#' \item{refseq_id}{character string, initial reported refseq id}
+#' \item{ensembl_id}{character string, converted id into ensembl 76}
+#' \item{g.name}{character string, gene name}
+#' \item{tissue}{character string, name of the tissue where the id has been reported}
+#'}
+"Tiger23Tissues"
+
+# selectTigerGenes
+#' TiGER reports TS genes for thirty independent tissues (based on ESTs experiments).
+#' Liu, X., X. Yu, D. J. Zack, H. Zhu, and J. Qian (2008). ‘TiGER: a database for tissue-specific gene expression and regulation’. BMC Bioinformatics 9, p. 271“)
+#'
+#' vector of ids selected from the panel (allow to showcase various specificity)
+#' @format A vector of selected ensembl gene ids (picked based on TiGER)
+"selectTigerGenes"
+
+# smallerSubsetTigerMix
+#' TiGER reports TS genes for thirty independent tissues (based on ESTs experiments).
+#' Liu, X., X. Yu, D. J. Zack, H. Zhu, and J. Qian (2008). ‘TiGER: a database for tissue-specific gene expression and regulation’. BMC Bioinformatics 9, p. 271“)
+#'
+#' vector of ids selected from the panel (allow to showcase various specificity)
+#' @format A vector of selected ensembl gene ids (picked based on TiGER)
+"smallerSubsetTigerMix"
+

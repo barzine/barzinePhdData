@@ -53,3 +53,7 @@ uhlen.htseq.raw
 uhlen.htseq.tpm.pooled
 uhlen.htseq.tpm.pooled.tech
 uhlen.htseq.tpm
+Tiger4Tissues
+Tiger23Tissues
+selectTigerGenes
+smallerSubsetTigerMix
