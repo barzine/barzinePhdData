@@ -1,8 +1,10 @@
 language: r
 r:
-  - bioc-devel
+  - rel
 
 cache: packages
 bioc_required: true
-bioc_use_devel: true
+bioc_use_devel: false
 
+warnings_are_errors: false
+latex: false
